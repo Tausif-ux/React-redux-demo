@@ -28,6 +28,7 @@ store.subscribe(() => console.log('After Subscrption: ', store.getState()));
 
 // Dispatch - Actions
 
-store.dispatch({type: 'INC_COUNT'});
-store.dispatch({type: 'ADD_COUNT', action: 7});
+const op1 = store.dispatch({type: 'INC_COUNT'});
+const op2 = store.dispatch({type: 'ADD_COUNT', action: 7});
 console.log(store.getState());
+console.log(op1, op2);
